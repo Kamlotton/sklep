@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^adres.pl [NC]
-RewriteRule ^(.*)$ http://www.adres.pl/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^dominotoys.pl [NC]
+RewriteRule ^(.*)$ http://www.dominotoys.pl/$1 [L,R=301]
 
 RewriteBase /
 
@@ -9,11 +9,11 @@ RewriteBase /
 #RewriteRule ^sitemap.xml$ /php/sitemap.php [L]
 
 
-RewriteRule ^([^/]{1,1000})/$ /php/index.php?slug=$1 [L]
-RewriteRule ^$ /php/index.php [L]
+#RewriteRule ^([^/]{1,1000})/$ /php/index.php?slug=$1 [L]
+#RewriteRule ^$ /php/index.php [L]
 
 
-RewriteRule ^artykuly/([^/]{1,1000})/$ /artykul/$1/ [R=301,L]
+#RewriteRule ^artykuly/([^/]{1,1000})/$ /artykul/$1/ [R=301,L]
 
 
 </IfModule>
