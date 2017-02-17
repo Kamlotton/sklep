@@ -37,3 +37,8 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.register_text {
+    margin-top: 5px;
+    font-size: 80%;
+}

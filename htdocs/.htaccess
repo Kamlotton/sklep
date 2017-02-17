@@ -1,9 +1,15 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^dominotoys.pl [NC]
+
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} ^dominotoys\.pl [NC]
+RewriteCond %{HTTP_HOST} ^www\.dominotoys\.pl [NC]
 RewriteRule ^(.*)$ http://www.dominotoys.pl/$1 [L,R=301]
 
 RewriteBase /
+
+RewriteRule ^login/$ php/login_display.php [L]
+RewriteRule ^register/$ php/register_display.php [L]
 
 #RewriteRule ^stary-adres/$ /nowy-adres/ [R=301,L]
 #RewriteRule ^sitemap.xml$ /php/sitemap.php [L]
