@@ -11,4 +11,13 @@ if (isset($_SESSION['user'])){
     exit(0);
 }
 
+include '../../config/config.php';
+
+$query = "SELECT * from tbl_user";
+$result = pg_query($query);
+while ($row = pg_fetch_assoc($result)){
+    print_r($row);
+}
+
+
 include '../templates/login.html';

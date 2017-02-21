@@ -33,7 +33,7 @@ CREATE SEQUENCE seq_user_address_id;
 CREATE TABLE tbl_user_address
 (
     id      int DEFAULT nextval('seq_user_address_id') NOT NULL,
-    iduser  int REFERENCES tbl_nz_company_type(id), --typ firmy
+    iduser  int REFERENCES tbl_user(id), --typ firmy
 
     PRIMARY KEY (id)
 );
@@ -42,7 +42,7 @@ CREATE SEQUENCE seq_user_comment_id;
 CREATE TABLE tbl_user_comment --tabela z uwagami o userach
 (
     id int DEFAULT nextval('seq_user_comment_id') NOT NULL,
-    iduser  int REFERENCES tbl_nz_company_type(id), --typ firmy
+    iduser  int REFERENCES tbl_user(id), --typ firmy
     text    text,  --treść uwagi
 
     PRIMARY KEY (id)
